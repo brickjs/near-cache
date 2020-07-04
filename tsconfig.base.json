@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "lib": ["ES2017"],
+    "module": "commonjs",
+    "target": "ES2017",
+    "jsx": "react",
+    "sourceMap": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "./node_modules/*",
+    "./config/*",
+    "./packages/*/config/*",
+    "./packages/*/node_modules/*",
+    "./packages/*/jest.config.js",
+    "./packages/*/jest.config.CI.js",
+    "./packages/*/gulpfile.js",
+    "./packages/*/webpack.config.js",
+    "./packages/*/lib/*",
+    "./packages/*/coverage/*"
+  ]
+}
+

@@ -1,0 +1,37 @@
+{
+  "name": "near-cache-adapter-redis-3",
+  "version": "1.0.0",
+  "description": "near-cache adapter for redis@3 client.",
+  "author": "Vito Limandibhrata <vito.limandibhrata@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "redis",
+    "lru-cache",
+    "near cache",
+    "decorator",
+    "javascript",
+    "typescript",
+    "cache",
+    "cacheable"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "near-cache-adapter": "^1.0.0"
+  },
+  "peerDependencies": {
+    "redis": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/redis": "2.8.22",
+    "@types/jest": "25.2.3",
+    "jest": "26.0.1",
+    "jest-junit": "10.0.0",
+    "redis": "^3.0.0",
+    "ts-jest": "26.1.0",
+    "tsc-watch": "4.2.8",
+    "typescript": "3.9.5"
+  }
+}

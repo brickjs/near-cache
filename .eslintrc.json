@@ -1,0 +1,32 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier", "jest", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "import/prefer-default-export": 0,
+    "prettier/prettier": ["error"],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "env": {
+    "jest/globals": true,
+    "browser": true
+  }
+}
