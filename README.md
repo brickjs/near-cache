@@ -1,5 +1,14 @@
 # near-cache
 
+<p align="center">
+    <a href="https://github.com/brickjs/near-cache/actions?query=workflow%3A%22CI+Build+Test%22">
+      <img src="https://github.com/brickjs/near-cache/workflows/CI%20Build%20Test/badge.svg?branch=master" />
+    </a>
+    <a href="https://codecov.io/gh/brickjs/near-cache">
+      <img src="https://codecov.io/gh/brickjs/near-cache/branch/master/graph/badge.svg" />
+    </a>
+</p>
+
 Decorator to cache returned value of any ES6 class methods with Redis and in server memory.
 
 In server memory acts as the near cache to store data which are accessed very frequently.
@@ -23,10 +32,10 @@ Thus, a combination of `cacheName:cacheKey` is a unique key to retrieve a cached
 
 ### Near Cache
 
-In distributed system, remote operations, including accesses to Redis cache, have relatively high latencies. 
+In a distributed system, remote operations, including accesses to Redis cache, have relatively high latencies. 
 Near cache (in server memory cache) will reduce both the remote server and Redis load.
 
-Data which will not be updated within a fixed interval will benefit most for the near cache.
+Data which will not be updated within a fixed interval will benefit most from the near cache.
 Hourly weather data is a good example.
 
 ## Usage
