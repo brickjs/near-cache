@@ -1,0 +1,31 @@
+{
+  "name": "near-cache-adapter",
+  "version": "1.0.0",
+  "description": "near-cache adapter for various cache clients.",
+  "author": "Vito Limandibhrata <vito.limandibhrata@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "brickjs",
+    "near cache",
+    "near-cache",
+    "decorator",
+    "javascript",
+    "typescript",
+    "cache",
+    "adapter",
+    "redis"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/redis": "2.8.22",
+    "@types/jest": "25.2.3",
+    "jest": "26.0.1",
+    "jest-junit": "10.0.0",
+    "ts-jest": "26.1.0",
+    "tsc-watch": "4.2.8",
+    "typescript": "3.9.5"
+  }
+}
