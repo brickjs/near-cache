@@ -1,13 +1,13 @@
 name: CI Build Test Publish
 
 on:
-  push:
+  pull_request:
     branches:
       - release/*
 
 jobs:
   build:
-    name: Building
+    name: Publishing
     runs-on: ubuntu-latest
     env:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
