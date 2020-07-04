@@ -1,16 +1,17 @@
-name: CI Build Test
+name: CI Build Test Publish
 
 on:
   push:
     branches:
-      - feature/*
-      - master
-      - develop
+      - release/*
 
 jobs:
   build:
     name: Building
     runs-on: ubuntu-latest
+    env:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     services:
       redis:
         image: redis
@@ -39,6 +40,19 @@ jobs:
       - run: yarn lerna:test-all
 
       - name: CodeCov
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: bash <(curl -s https://codecov.io/bash)
+
+      - name: Publish near-cache-adapter
+        run: |
+          cd ${GITHUB_WORKSPACE}/packages/near-cache-adapter
+          npm publish
+
+      - name: Publish near-cache-adapter-redis-3
+        run: |
+          cd ${GITHUB_WORKSPACE}/packages/near-cache-adapter-redis-3
+          npm publish
+
+      - name: Publish near-cache
+        run: |
+          cd ${GITHUB_WORKSPACE}/packages/near-cache
+          npm publish
