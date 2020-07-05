@@ -4,6 +4,11 @@
   "description": "near-cache adapter for redis@3 client.",
   "author": "Vito Limandibhrata <vito.limandibhrata@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brickjs/near-cache.git",
+    "directory": "packages/near-cache-adapter-redis-3"
+  },
   "keywords": [
     "redis",
     "lru-cache",
