@@ -5,6 +5,10 @@
   "author": "Vito Limandibhrata <vito.limandibhrata@gmail.com>",
   "homepage": "https://brickjs.io/",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brickjs/near-cache.git"
+  },
   "keywords": [
     "typescript",
     "reactjs",

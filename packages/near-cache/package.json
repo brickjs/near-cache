@@ -4,6 +4,11 @@
   "description": "Decorator to cache returned value of any ES6 class methods with in server memory cache.",
   "author": "Vito Limandibhrata <vito.limandibhrata@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brickjs/near-cache.git",
+    "directory": "packages/near-cache"
+  },
   "keywords": [
     "redis",
     "lru-cache",
