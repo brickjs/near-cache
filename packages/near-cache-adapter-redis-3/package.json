@@ -1,6 +1,6 @@
 {
   "name": "near-cache-adapter-redis-3",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "near-cache adapter for redis@3 client.",
   "author": "Vito Limandibhrata <vito.limandibhrata@gmail.com>",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "build": "tsc"
   },
   "dependencies": {
-    "near-cache-adapter": "^1.1.0"
+    "near-cache-adapter": "^1.1.1"
   },
   "peerDependencies": {
     "redis": "^3.0.0"
