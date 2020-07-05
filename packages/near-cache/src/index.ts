@@ -1,4 +1,6 @@
 export { Cacheable } from './Cacheable';
+export { CacheEvict } from './CacheEvict';
+export { CachePut } from './CachePut';
 export {
   isValidCacheName,
   get,
