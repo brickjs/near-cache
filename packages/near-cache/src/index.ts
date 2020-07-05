@@ -8,4 +8,8 @@ export {
   dumpNear,
   getNearItemCount,
   resetNear,
+  addCache,
+  close,
+  closeAllCacheClients,
+  flushAllCacheClients,
 } from './NearCache';
