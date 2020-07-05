@@ -1,6 +1,6 @@
 {
   "name": "near-cache-adapter-redis-3",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "near-cache adapter for redis@3 client.",
   "author": "Vito Limandibhrata <vito.limandibhrata@gmail.com>",
   "license": "MIT",
@@ -24,14 +24,14 @@
     "build": "tsc"
   },
   "dependencies": {
-    "near-cache-adapter": "^1.0.0"
+    "near-cache-adapter": "^1.1.0"
   },
   "peerDependencies": {
     "redis": "^3.0.0"
   },
   "devDependencies": {
-    "@types/redis": "2.8.22",
     "@types/jest": "25.2.3",
+    "@types/redis": "2.8.22",
     "jest": "26.0.1",
     "jest-junit": "10.0.0",
     "redis": "^3.0.0",
