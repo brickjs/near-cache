@@ -16,8 +16,16 @@ In server memory acts as the near cache to store data which are accessed very fr
 ## Installation
 
 ```
-npm install @brickjs/near-redis-cache --save
+npm install near-cache --save
 ```
+
+Depending on your redis version, install the correct adapter.
+> Only redis@3 is supported currently.
+
+```
+npm install near-cache-adapter-redis-3 --save
+```
+
 ## Concept
 
 ### Cache Name
