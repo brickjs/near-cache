@@ -80,7 +80,7 @@ When the customer data is updated or deleted, the cached stale data must be remo
  ```javascript
  import { CacheEvict } from 'near-cache';
  
- export class NearRedisCacheableDemo {
+ export class CustomerService {
  
    @CacheEvict({cacheName: 'customer', key: (args) => args[0].id})
    update(customer) {
@@ -100,10 +100,26 @@ Alternatively, to prevent too many data evictions, `@CachePut` annotation can be
  ```javascript
  import { CachePut } from 'near-cache';
  
- export class NearRedisCacheableDemo {
+ export class CustomerService {
  
    @CachePut({cacheName: 'customer', maxAge: 3600, maxNearAge: 60 * 1000, key: (args) => args[0].id})
    update(customer) {
+     return customer;
+   }
+ }
+ ```
+
+If you need the newly created customer.id, you could use the result object to generate the key.
+The example below shows how the key is generated using the new customer object which is returned by the cached function.
+
+ ```javascript
+ import { CachePut } from 'near-cache';
+ 
+ export class CustomerService {
+ 
+   @CachePut({cacheName: 'customer', maxAge: 3600, maxNearAge: 60 * 1000, key: (args, result) => result.id})
+   create(customer) {
+     customer.id = 10; 
      return customer;
    }
  }
