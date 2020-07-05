@@ -1,7 +1,7 @@
 name: CI Build Test Publish
 
 on:
-  pull_request:
+  push:
     branches:
       - release/*
 
@@ -44,15 +44,18 @@ jobs:
 
       - name: Publish near-cache-adapter
         run: |
+          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
           cd ${GITHUB_WORKSPACE}/packages/near-cache-adapter
           npm publish
 
       - name: Publish near-cache-adapter-redis-3
         run: |
+          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
           cd ${GITHUB_WORKSPACE}/packages/near-cache-adapter-redis-3
           npm publish
 
       - name: Publish near-cache
         run: |
+          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
           cd ${GITHUB_WORKSPACE}/packages/near-cache
           npm publish

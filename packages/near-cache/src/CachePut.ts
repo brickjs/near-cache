@@ -17,10 +17,9 @@ export const CachePut = ({ cacheName, maxAge, maxNearAge, key }: CachePutProps) 
       descriptor.value = async function (...args: any) {
         const selectedCacheName = cacheName && isValidCacheName(cacheName) ? cacheName : undefined;
 
-        const cacheKey: string = `${key ? key(args) : createCacheKey(args)}`;
-
         try {
           const result = await original.apply(this, args);
+          const cacheKey: string = `${key ? key(args, result) : createCacheKey(args)}`;
 
           if (selectedCacheName) {
             if (!Number.isNaN(maxNearAge) && maxNearAge > 0) {

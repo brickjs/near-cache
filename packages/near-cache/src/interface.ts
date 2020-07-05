@@ -4,8 +4,9 @@ export interface CacheProps {
    */
   cacheName: string;
   /**
-   * Custom function to generate custom cache key
+   * Custom function to generate custom cache key.
+   * result will be supplied for @CachePut
    * @param args are the arguments of the cached function
    */
-  key?: (args: IArguments) => string;
+  key?: (args: IArguments, result?: any) => string;
 }

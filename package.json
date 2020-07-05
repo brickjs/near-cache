@@ -5,6 +5,10 @@
   "author": "Vito Limandibhrata <vito.limandibhrata@gmail.com>",
   "homepage": "https://brickjs.io/",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brickjs/near-cache.git"
+  },
   "keywords": [
     "typescript",
     "reactjs",
@@ -15,6 +19,7 @@
     "packages/*"
   ],
   "scripts": {
+    "commit": "brickjs-commit",
     "bootstrap": "yarn install",
     "prettier:check": "prettier --check \"packages/*/src/**/*.ts\" ",
     "prettier:check:debug": "prettier --debug-check \"packages/*/src/**/*.ts\" ",
@@ -27,6 +32,7 @@
     "@types/jest": "25.2.3",
     "@typescript-eslint/eslint-plugin": "3.4.0",
     "@typescript-eslint/parser": "3.4.0",
+    "brickjs-commit": "1.0.0",
     "codecov": "3.7.0",
     "eslint": "7.3.1",
     "eslint-config-airbnb": "18.2.0",
